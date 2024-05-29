@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개서</title>
+    <style>
+        body {
+            background-image: url("ooo.png");
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgb(251, 249, 115);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+            color: #555;
+        }
+        .highlight {
+            color: #007BFF;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>필재의 자기소개서</h1>
+        <p>안녕하세요. 저는 민필재입니다. 컴퓨터 공학과에 진학하여 미래의 혁신적인 기술 개발에 기여하고자 하는 열정적인 고등학생입니다.</p>
+        
+        <p class="hidden" id="name">어릴 적부터 저는 컴퓨터와 기술에 대해 깊은 관심을 가져왔습니다. 부모님께서 처음 사주신 컴퓨터를 가지고 놀면서, 단순히 게임을 즐기는 것에서 나아가 컴퓨터의 작동 원리에 대해 궁금해하기 시작했습니다. 이러한 호기심은 저를 프로그래밍과 코딩의 세계로 이끌었습니다.</p>
+        
+        <p><span class="highlight" onclick="showContent('education')">학업 및 관련 활동</span></p>
+        <p class="hidden" id="education">고등학교에서 저는 수학과 과학 과목에 특히 열심히 임했습니다. 수학은 논리적 사고와 문제 해결 능력을 키워주었고, 물리학과 화학은 기술의 기초가 되는 과학적 원리를 이해하는 데 큰 도움이 되었습니다. 어렸을 때부터 코딩하는 것을 즐겨왔고, 이는 저를 학교의 컴퓨터 클럽으로 이끌었습니다. 저는 클럽에서 친구들과 함께 다양한 프로젝트를 수행하며 실력을 쌓아갔습니다. 그 중 가장 기억에 남는 프로젝트는 간단한 웹사이트를 개발한 경험으로, 이를 통해 HTML, CSS, JavaScript와 같은 웹 기술에 대한 이해를 넓혔습니다.</p>
+        
+        <p><span class="highlight" onclick="showContent('achievements')">자격증 및 대회 참여</span></p>
+        <p class="hidden" id="achievements">저는 정보처리기능사 자격증을 취득하였고, 여러 프로그래밍 대회에 참가하였습니다. 특히, 전국 청소년 정보올림피아드에 참가하여 장려상을 수상한 경험은 제게 큰 자부심과 동기부여가 되었습니다. 이러한 경험을 통해 팀워크와 문제 해결 능력을 기를 수 있었습니다.</p>
+        
+        <p><span class="highlight" onclick="showContent('future')">진로 계획</span></p>
+        <p class="hidden" id="future">컴퓨터 공학과에 진학하여 소프트웨어 개발, 데이터 과학, 인공지능 등 다양한 분야를 공부하고 싶습니다. 저는 특히 인공지능과 머신러닝에 큰 관심을 가지고 있으며, 이 분야에서 연구를 통해 인류에 기여하는 기술을 개발하고 싶습니다. 대학에서는 심도 있는 전공 학습과 다양한 연구 프로젝트에 참여하여 실력을 쌓고, 졸업 후에는 대학원에 진학하거나 관련 업계에서 경력을 쌓아 전문가로 성장하고자 합니다.</p>
+        
+        <p><span class="highlight" onclick="showContent('conclusion')">맺음말</span></p>
+        <p class="hidden" id="conclusion">컴퓨터 공학은 미래 사회를 이끌어갈 핵심 분야라고 생각합니다. 저는 새로운 지식을 배우고, 도전을 즐기며, 끊임없이 성장할 준비가 되어 있습니다. 귀교의 컴퓨터 공학과에서 저의 꿈을 이루기 위한 첫걸음을 내딛고 싶습니다. 감사합니다.</p>
+    </div>
+
+    <script>
+        function showContent(id) {
+            const content = document.getElementById(id);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+            } else {
+                content.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
